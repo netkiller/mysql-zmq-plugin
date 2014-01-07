@@ -5,6 +5,8 @@ ZeroMQ / ØMQ for MySQL
 
 Build
 -----
+	# yum install zeromq-devel
+	
 	cmake .
 	make && make install
 
