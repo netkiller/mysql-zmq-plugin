@@ -3,6 +3,8 @@ mysql-zmq-plugin
 
 ZeroMQ / ØMQ for MySQL
 
+http://zeromq.org/event:zeromq-for-mysql
+
 Build
 -----
 	# yum install zeromq-devel
