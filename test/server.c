@@ -20,7 +20,7 @@ int main (int argc,char**argv)
 
 		zmq_msg_t buffer={0};
 		zmq_msg_init (&buffer);
-		zmq_recvmsg (zmqsocket, &buffer,0);
+		zmq_msg_recv (&buffer, zmqsocket, 0);
 		int size = zmq_msg_size (&buffer);
 		char *string = malloc (size + 1);
 		memset(string,0,size+1);
@@ -38,7 +38,7 @@ int main (int argc,char**argv)
 		zmq_msg_init_size (&buffer, strlen(send));
 		memcpy (zmq_msg_data (&buffer), send, strlen(send));
 		
-		if(zmq_sendmsg(zmqsocket, &buffer, 0) == 0){
+		if(zmq_msg_send(&buffer, zmqsocket, 0) == 0){
 			printf ("Sent: %s\n", send);
 		}
 		

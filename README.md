@@ -7,10 +7,10 @@ http://zeromq.org/event:zeromq-for-mysql
 
 Build
 -----
-	# yum install zeromq-devel
+	# yum install zeromq3-devel
 	
-	cmake .
-	make && make install
+	# cmake .
+	# make && make install
 
 Install & uninstall
 -------------------
