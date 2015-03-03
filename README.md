@@ -73,3 +73,7 @@ Test
 --------
 	gcc -O3  -g  -I/usr/include/mysql -I/usr/include  -fPIC -lm -lz -shared -o libzeromq.so zeromq.c
 	sudo mv libzeromq.so /usr/lib/mysql/plugin/
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/netkiller/mysql-zmq-plugin/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
