@@ -1,6 +1,8 @@
 mysql-zmq-plugin
 ================
 
+[![Join the chat at https://gitter.im/netkiller/mysql-zmq-plugin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/netkiller/mysql-zmq-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ZeroMQ / ØMQ for MySQL
 
 http://zeromq.org/event:zeromq-for-mysql
