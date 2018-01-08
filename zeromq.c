@@ -33,10 +33,15 @@ char *zmq_client(UDF_INIT *initid, UDF_ARGS *args,
 {
 
 	char *text;
+	text = "NULL";
 	int status = -1;
 	
 	void *context = zmq_ctx_new ();
 	void *zmqsocket = zmq_socket (context, ZMQ_REQ);
+	int timeout = 250;
+        zmq_setsockopt(zmqsocket, ZMQ_SNDTIMEO, &timeout, sizeof timeout);
+        zmq_setsockopt(zmqsocket, ZMQ_RCVTIMEO, &timeout, sizeof timeout);
+        zmq_setsockopt(zmqsocket, ZMQ_LINGER, &timeout, sizeof timeout);
 	zmq_connect (zmqsocket, args->args[0]);
 
 	zmq_msg_t buffer={0};
@@ -110,7 +115,8 @@ char *zmq_publish(UDF_INIT *initid, UDF_ARGS *args,
     zmq_ctx_destroy (context);
   
 	/* 等有时间再完善 */
-	status = "等有时间再完善";
+//	status = "等有时间再完善";
+	status = "This is in english";
 
 	*length = strlen(status);
 	return ((char *)status);
